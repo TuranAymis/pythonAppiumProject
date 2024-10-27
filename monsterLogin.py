@@ -25,6 +25,7 @@ driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='G
 time.sleep(2)
 driver.find_element(by=AppiumBy.XPATH, value="//android.widget.EditText[@content-desc='eposta']").send_keys("turan.aymis@monsternotebook.com")
 driver.find_element(by=AppiumBy.XPATH, value="//android.widget.EditText[@content-desc='password']").send_keys("test123")
-time.sleep(2)
+time.sleep(1)
 driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='GİRİŞ YAP']").click()
+time.sleep(2)
 driver.quit()
