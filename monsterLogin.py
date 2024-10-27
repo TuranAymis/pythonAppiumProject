@@ -16,15 +16,15 @@ url = 'http://localhost:4724'
 
 driver = webdriver.Remote(url, options=AppiumOptions().load_capabilities(cap))
 
-#el = driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextView[@content-desc="Phone"]')
-#el.click()
-
+el = driver.find_element(by=AppiumBy.XPATH, value='//android.widget.TextView[@content-desc="Monster Notebook"]')
+el.click()
+time.sleep(3)
+driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='Hesabım']").click()
 time.sleep(2)
-
-#driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="key pad").click()
-#driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='1']").click()
-#driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='2']").click()
-#driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='3']").click()
+driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='GİRİŞ YAP / ÜYE OL']").click()
 time.sleep(2)
-
+driver.find_element(by=AppiumBy.XPATH, value="//android.widget.EditText[@content-desc='eposta']").send_keys("turan.aymis@monsternotebook.com")
+driver.find_element(by=AppiumBy.XPATH, value="//android.widget.EditText[@content-desc='password']").send_keys("test123")
+time.sleep(2)
+driver.find_element(by=AppiumBy.XPATH, value="//android.widget.TextView[@text='GİRİŞ YAP']").click()
 driver.quit()
